@@ -22,4 +22,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomePage.as_view(), name="homepage"),
+    path("api/", include('profiles_api.urls'), name="api"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
